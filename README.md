@@ -17,7 +17,6 @@ backgroundColor: UIColor.blue, imageWidth: 100, imageHeight: 100, buttonWidth: 2
 - `backgroundColor` - color of the alert's background (UIColor.xxxx)
 - `imageWidth` - width of the image
 - `imageHeight` - height of the image
-- **NOTE: NON-SQUARE IMAGES WILL NOT ALIGN CORRECTLY**
 - `buttonWidth` - width of the button
 - `buttonHeight` - height of the button
 - `buttonAlignment` - where the button will be displayed (`"top", "center", or "bottom")
