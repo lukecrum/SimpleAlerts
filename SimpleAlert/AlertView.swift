@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class AlertView: UIView {
+class SimpleAlert: UIView {
     let button = UIButton()
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(width: Int, height: Int, image: String, text: String, backgroundColor: UIColor, textAlignment: String, imageWidth: CGFloat, imageHeight: CGFloat, buttonWidth: Int, buttonHeight: Int, buttonAlignment: String)
+    init(width: Int, height: Int, image: String, text: String, textAlignment: String, backgroundColor: UIColor, imageWidth: CGFloat, imageHeight: CGFloat, buttonWidth: Int, buttonHeight: Int, buttonAlignment: String)
     {
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         super.init(frame:rect)
@@ -29,6 +29,7 @@ class AlertView: UIView {
     
     func addImage(image: String, imageWidth: CGFloat, imageHeight: CGFloat) {
         let displayImage = UIImage(named: image)
+        //NOTE: this will return a fatal error if you used an image that does not exist in your assets folder
         let imageView = UIImageView(image: displayImage!)
         imageView.frame = CGRect(x: self.center.x/2, y: self.center.y/2, width: imageWidth, height: imageHeight)
         self.addSubview(imageView)
