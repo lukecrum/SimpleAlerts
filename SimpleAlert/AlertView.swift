@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AlertViewController: UIView {
+class AlertView: UIView {
     let button = UIButton()
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

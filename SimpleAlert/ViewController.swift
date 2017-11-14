@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonPresses(_ sender: Any) {
-        let alertView = AlertViewController(width: 200, height: 300, image: "z-foot", text: "Alert!", backgroundColor: UIColor.blue, textAlignment: "top", imageWidth: 100, imageHeight: 100, buttonWidth: 200, buttonHeight: 50, buttonAlignment: "bottom")
+        let alertView = AlertView(width: 200, height: 300, image: "z-foot", text: "Alert!", backgroundColor: UIColor.blue, textAlignment: "top", imageWidth: 100, imageHeight: 100, buttonWidth: 200, buttonHeight: 50, buttonAlignment: "bottom")
         self.view.addSubview(alertView)
         alertView.center = view.center
     }
