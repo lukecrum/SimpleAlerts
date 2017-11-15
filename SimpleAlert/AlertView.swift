@@ -58,17 +58,24 @@ class SimpleAlert: UIView {
     }
     
     func addButton(buttonWidth: CGFloat, buttonHeight: CGFloat, buttonAlignment: String){
-       
+
+        let buttonNumber: CGFloat
         switch buttonAlignment {
         case "center":
-            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 0.8, width: buttonWidth, height: buttonHeight)
+            button.frame = CGRect(x: self.center.x - buttonWidth/2, y: self.center.y * 0.8, width: buttonWidth, height: buttonHeight)
+             buttonNumber = 0.8
         case "top":
-            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 0.1, width: buttonWidth, height: buttonHeight)
+            button.frame = CGRect(x: self.center.x - buttonWidth/2, y: self.center.y * 0.1, width: buttonWidth, height: buttonHeight)
+             buttonNumber = 0.1
         case "bottom":
-            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 1.5, width: buttonWidth, height: buttonHeight)
+            button.frame = CGRect(x: self.center.x - buttonWidth/2, y: self.center.y * 1.5, width: buttonWidth, height: buttonHeight)
+             buttonNumber = 1.5
         default:
-            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 1.5, width: buttonWidth, height: buttonHeight)
+            button.frame = CGRect(x: self.center.x - buttonWidth/2, y: self.center.y * 1.5, width: buttonWidth, height: buttonHeight)
+             buttonNumber = 1.5
         }
+        //button.center = self.center
+        button.isSpringLoaded = true
         button.setTitle("Dismiss", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.backgroundColor = UIColor.darkGray
