@@ -26,17 +26,19 @@ class SimpleAlert: UIView {
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         self.layer.cornerRadius = 7;
         self.layer.masksToBounds = true;
-        self.alpha = 0.0
+        //self.alpha = 0.0
         print("Created alert view!")
     }
-    func fadeIn(withDuration duration: TimeInterval = 0.5) {
-        UIView.animate(withDuration: duration, animations: {
-            self.alpha = 1.0
-        })
-    }
-    override func willMove(toSuperview newSuperview: UIView?) {
-        fadeIn()
-    }
+    //func fadeIn(withDuration duration: TimeInterval = 0.5) {
+    //    UIView.animate(withDuration: duration, animations: {
+   //         self.alpha = 1.0
+   //     })
+   // }
+   // override func willMove(toSuperview newSuperview: UIView?) {
+    //    fadeIn()
+    //}
+    
+
     func addImage(image: String, imageWidth: CGFloat, imageHeight: CGFloat) {
         let displayImage = UIImage(named: image)
         //NOTE: this will return a fatal error if you used an image that does not exist in your assets folder

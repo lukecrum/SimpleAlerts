@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alertView.alpha = 0.0
+        //alertView.alpha = 0.0
 
     }
 
