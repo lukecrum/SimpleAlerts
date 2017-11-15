@@ -28,15 +28,11 @@ class ViewController: UIViewController {
     @IBAction func buttonPresses(_ sender: Any) {
 
         alertView.center = view.center
-        alertView.alpha = 0.0
+
         self.view.addSubview(alertView)
-        fadeIn()
+
     }
-    func fadeIn(withDuration duration: TimeInterval = 0.5) {
-        UIView.animate(withDuration: duration, animations: {
-            self.alertView.alpha = 1.0
-        })
-    }
+
     
 }
 
