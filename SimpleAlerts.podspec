@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "SimpleAlerts"
   s.version      = "0.0.1"
-  s.summary      = "A short description of SimpleAlerts."
+  s.summary      = "A lightweight alert framework in Swift."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                    DESC
 
-  s.homepage     = "http://EXAMPLE/SimpleAlerts"
+  s.homepage     = "https://github.com/lukecrum/SimpleAlerts"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -52,10 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Aaron Sutton" => "aaronjsutton@icloud.com" }
-  # Or just: s.author    = "Aaron Sutton"
-  # s.authors            = { "Aaron Sutton" => "aaronjsutton@icloud.com" }
-  # s.social_media_url   = "http://twitter.com/Aaron Sutton"
+  s.author             = { "Luke Crum" => "lukecrum20@gmail.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -63,7 +60,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
+   s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
