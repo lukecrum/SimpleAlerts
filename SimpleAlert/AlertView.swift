@@ -15,7 +15,7 @@ class SimpleAlert: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(width: Int, height: Int, image: String, text: String, textAlignment: String, backgroundColor: UIColor, imageWidth: CGFloat, imageHeight: CGFloat, buttonWidth: Int, buttonHeight: Int, buttonAlignment: String)
+    init(width: Int, height: Int, image: String, text: String, textAlignment: String, backgroundColor: UIColor, imageWidth: CGFloat, imageHeight: CGFloat, buttonWidth: CGFloat, buttonHeight: CGFloat, buttonAlignment: String)
     {
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         super.init(frame:rect)
@@ -53,24 +53,27 @@ class SimpleAlert: UIView {
         
         label.textAlignment = .center
         label.text = text
-        label.font = UIFont(name: "Comic-sans-ms", size: 20)
     
         self.addSubview(label)
     }
     
-    func addButton(buttonWidth: Int, buttonHeight: Int, buttonAlignment: String){
+    func addButton(buttonWidth: CGFloat, buttonHeight: CGFloat, buttonAlignment: String){
        
         switch buttonAlignment {
         case "center":
-            button.frame = CGRect(x: 0, y: self.center.y * -0.75, width: self.bounds.size.width, height: self.bounds.size.height)
+            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 0.8, width: buttonWidth, height: buttonHeight)
         case "top":
-            button.frame = CGRect(x: 0, y: self.center.y * -0.75, width: self.bounds.size.width, height: self.bounds.size.height)
+            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 0.1, width: buttonWidth, height: buttonHeight)
         case "bottom":
-            button.frame = CGRect(x: 0, y: self.center.y * 0.75, width: self.bounds.size.width, height: self.bounds.size.height)
+            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 1.5, width: buttonWidth, height: buttonHeight)
         default:
-            button.frame = CGRect(x: 0, y: self.center.y * -0.75, width: self.bounds.size.width, height: self.bounds.size.height)
+            button.frame = CGRect(x: self.center.x / 2, y: self.center.y * 1.5, width: buttonWidth, height: buttonHeight)
         }
         button.setTitle("Dismiss", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor.darkGray
+        button.layer.cornerRadius = 7
+        button.layer.masksToBounds = true
         self.addSubview(button)
     }
     @objc func buttonTapped() {
