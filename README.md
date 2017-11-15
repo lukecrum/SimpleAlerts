@@ -1,3 +1,6 @@
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/3P7HvFUC2L4B4rwAb64q6ma8/lukecrum/SimpleAlerts'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/3P7HvFUC2L4B4rwAb64q6ma8/lukecrum/SimpleAlerts.svg' />
+</a>
 # SimpleAlerts
 A lightweight alert framework written in swift
 
