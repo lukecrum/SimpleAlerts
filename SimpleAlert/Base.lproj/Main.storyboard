@@ -23,6 +23,7 @@
                                     <constraint firstAttribute="width" constant="46" id="SYZ-Ne-uz4"/>
                                     <constraint firstAttribute="height" constant="30" id="vJN-4x-2zW"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPresses:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0D-Ox-Cuj"/>

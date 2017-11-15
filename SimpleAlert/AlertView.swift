@@ -24,6 +24,8 @@ class SimpleAlert: UIView {
         addButton(buttonWidth: buttonWidth, buttonHeight: buttonHeight, buttonAlignment: buttonAlignment)
         self.backgroundColor = backgroundColor
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        self.layer.cornerRadius = 7;
+        self.layer.masksToBounds = true;
         print("Created alert view!")
     }
     
@@ -31,7 +33,8 @@ class SimpleAlert: UIView {
         let displayImage = UIImage(named: image)
         //NOTE: this will return a fatal error if you used an image that does not exist in your assets folder
         let imageView = UIImageView(image: displayImage!)
-        imageView.frame = CGRect(x: self.center.x/2, y: self.center.y/2, width: imageWidth, height: imageHeight)
+        imageView.frame = CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight)
+        imageView.center = self.center
         self.addSubview(imageView)
     }
     
@@ -50,6 +53,8 @@ class SimpleAlert: UIView {
         
         label.textAlignment = .center
         label.text = text
+        label.font = UIFont(name: "Comic-sans-ms", size: 20)
+    
         self.addSubview(label)
     }
     
